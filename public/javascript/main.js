@@ -167,7 +167,7 @@ $(document).ready(function () {
                 }
             })
             .addTo(controller)
-            .addIndicators()
+            //.addIndicators()
     }
     $("#modelIgotit").click(function(){
         $('.modal').attr('style','display:none');
