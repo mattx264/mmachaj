@@ -24,6 +24,6 @@
     "multer": "^1.1.0",
     "gulp-typescript": "2.13.6",
        "raphael": "2.2.1"
-  },
+  }
   
 }
