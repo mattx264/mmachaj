@@ -1,0 +1,135 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+section {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #545454 !important; }
+
+a:hover {
+  color: #545454 !important; }
+
+#home {
+  height: 100%; }
+  #home .contactInformation {
+    text-align: center;
+    padding-top: 15px;
+    height: 100px;
+    font-weight: 700; }
+    #home .contactInformation .git-hub-logo {
+      width: 35px;
+      margin: 0 auto;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("/images/GitHub-Mark-32px.png"); }
+    #home .contactInformation .glyphicon {
+      color: #000;
+      font-size: 35px; }
+  #home .carousel span {
+    display: none; }
+  #home .scroll-down-wraper {
+    position: relative;
+    height: 100px; }
+    #home .scroll-down-wraper .scroll-down-svg {
+      position: absolute;
+      height: 28px;
+      width: 100px; }
+      #home .scroll-down-wraper .scroll-down-svg .scroll-down {
+        stroke: white;
+        fill: none;
+        stroke-width: 5; }
+
+#tech-list .row {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+  #tech-list .row .tech-logo {
+    position: relative; }
+    #tech-list .row .tech-logo .text-wraper {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      width: 100%; }
+      #tech-list .row .tech-logo .text-wraper div.info {
+        color: white;
+        padding: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%; }
+        #tech-list .row .tech-logo .text-wraper div.info strong {
+          font-size: 18px; }
+        #tech-list .row .tech-logo .text-wraper div.info p {
+          font-weight: 700; }
+
+#profile .my-img {
+  box-shadow: 5px 5px 5px black; }
+
+#portfolio .row {
+  margin-top: 30px; }
+
+.modal-backdrop {
+  opacity: .5; }
+
+.center-content img {
+  height: 250px; }
+
+.center-content span {
+  display: flex;
+  align-items: center;
+  height: 250px; }
+
+a {
+  color: #00B7FF; }
+
+.top-img {
+  background: url(/images/top.jpg);
+  background-repeat: no-repeat;
+  height: calc(100% - 100px);
+  background-size: cover;
+  width: 100%; }
+
+.welcome-text {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .welcome-text h1, .welcome-text h3 {
+    color: white; }
+  .welcome-text h1 span {
+    display: inline-block; }
+  .welcome-text h1 span.eye {
+    content: '';
+    width: 0;
+    height: 13px;
+    background: black;
+    position: absolute;
+    bottom: 14px;
+    left: 4px;
+    border-radius: 50px; }
+
+@keyframes eyeblink {
+  0% {
+    width: 0px; }
+  50% {
+    width: 12px; }
+  100% {
+    width: 0px; } }
+
+.action-eyeblink {
+  animation: eyeblink 1s;
+  animation-direction: alternate; }

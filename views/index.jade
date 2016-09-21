@@ -1,0 +1,540 @@
+extends layout
+
+block content
+  nav.navbar-fixed-top.navbar-default 
+    div.container
+      div.navbar-header
+      div.navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li.active
+           a(href='#home') Home
+          li
+           a(href='#profile') Profile
+          li
+           a(href='#technology') Technology
+          li
+           a(href='#resume') Resume
+          li
+           a(href='#portfolio') Portfolio
+          li
+           a(href='#certifications') Certifications
+
+
+   
+  section#home
+    div.top-img
+   
+    div.welcome-text
+    
+      h1 Hello, I'm Mateusz Machaj 
+        span.ja :-)
+         span.eye.action
+      h3.carousel
+       span FRONT-END DEVELOPER.
+       span C# PROGRAMMER.
+       span System Architect.
+       span Idea guy.
+      //- div.scroll-down-wraper
+      //-    svg.scroll-down-svg
+      //-       path(d="M0 0 L50 25 L100 0").scroll-down
+      //-    svg#scroll-down-svg-1.scroll-down-svg
+      //-      path(d="M0 0 L50 25 L100 0").scroll-down
+      //-    svg#scroll-down-svg-2.scroll-down-svg
+      //-       path(d="M0 0 L50 25 L100 0").scroll-down
+    div.contactInformation
+      div.container
+        div.col-md-4.wow.bounceInUp.animated
+          div(class='glyphicon glyphicon-envelope')
+          
+        div.col-md-4.wow.bounceInUp.animated
+          div(class='glyphicon glyphicon-phone-alt')
+         
+            
+        div.col-md-4.wow.bounceInUp.animated
+          div.git-hub-logo
+          
+           
+      div.container
+           .col-md-4.wow.bounceInUp.animated
+              a(href='mailto:mattx264@gmail.com') mattx264@gmail.com
+           .col-md-4.wow.bounceInUp.animated
+              div  773-818-7340
+           .col-md-4.wow.bounceInUp.animated
+              a(href='https://github.com/mattx264') mattx264
+  section#profile
+    div.container
+      div.col-md-12
+        h2 Mateusz Machaj
+        p Front-end Developer. C# Programmer. System Architect
+      div.col-md-3.wow.bounceInLeft.animated
+        img.my-img(src='images/IMG_0706.jpg') 
+      div.col-md-3.wow.bounceInUp.animated
+         h3 SKILLSET
+         h5 Front-end developer
+         div.skill-bar
+          .skill-rate-on
+          .skill-rate-on
+          .skill-rate-on
+          .skill-rate-on
+          .skill-rate-off
+         h5 C# Programmer.
+          div.skill-bar
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-off
+         h5 System Architect.
+          div.skill-bar
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-off
+            .skill-rate-off
+         h5 Idea guy.
+          div.skill-bar
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+            .skill-rate-on
+      div.col-md-6
+        div.wow.bounceInRight.animated
+          h3 PROFESIONAL PROFILE
+          p 6 years of experience in the IT industry with extensive skilled in all phases of the software development lifecycle from designing to developing Web applications; expert in translating business requirements into technical solutions; and fanatical about quality, usability, security and scalability.
+        h5.wow.bounceInRight.animated My rules:
+        ul
+          li.wow.bounceInRight.animated Work Hard, but smart 
+          li.wow.bounceInRight.animated Be nice
+          li.wow.bounceInRight.animated Be on time
+          li.wow.bounceInRight.animated Never stop learning
+          li.wow.bounceInRight.animated Never give up
+  section#technology
+    div.container
+      .modal-backdrop(style="display:none")
+      div.modal.modal-open(style="display:none")
+      
+       .modal-dialog.modal-lg
+        div.modal-content
+          .modal-header 
+            h3 Technology Section Explanation
+          .modal-body
+            .row.center-content
+              .col-md-6
+                img(src='images/modal-exp/img2.png').pull-right
+              .col-md-6
+                span How a strong do I feel with technology.
+            .row.center-content
+              .col-md-6
+                img(src='images/modal-exp/img1.png').pull-right
+              .col-md-6
+                span Years of experience and short description.
+               
+          .modal-footer 
+            button#modelIgotit.btn.btn-primary Okay, I got it
+      
+      div.col-md-12
+         h2 Technology
+         p List of technology I'm working with.
+      div.col-md-12#tech-list
+        div.row#row1
+          div.col-md-3
+            div#csharp.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2010 +' years'
+                  p C sharp is my favorite back-end language, combining with MVC give powerful framework to create any web application you wish.
+          div.col-md-3
+            div#js.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2011 +' years'
+                  p In every project I'm working I use javascript. What I can say Universal language.
+          div.col-md-3
+            div#html5.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2010 +' years'
+                  p Html 4 was OK but html 5 is awesome, sorry Flash. From website throught video web chat to mobile app :D.
+
+          div.col-md-3
+            div#sql.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2010 +' years'
+                  p My first SQL script I wrote in High school but every day learn something new about sql.
+        div.row#row2
+          div.col-md-3
+            div#vs2015.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+               
+          div.col-md-3
+            div#vs2013.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+          div.col-md-3
+            div#vs2010.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2010 +' years'
+          div.col-md-3
+            div#vs2008.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+                  p
+        div.row#row3
+          div.col-md-3
+            div#css3.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2010 +' years'
+                  p I don't know if this is only me but I think CSS is hard.
+          div.col-md-3
+            div#sass.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+                  p I like Sass css preprocessor, it's first on my list.
+          div.col-md-3
+            div#less.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2014 +' years'
+                  p I used to use less a lot, now I more switch to sass.
+          div.col-md-3
+            div#bootstrap.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+                  p The best css framework.
+        div.row#row4
+          div.col-md-3
+            div#ecma6.tech-logo
+          div.col-md-3
+            div#typescript.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+                  p I like JS but I love Typescript it is very helpful with large application.
+        div.row#row5
+          div.col-md-3
+            div#dotnet.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#mvc.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2012 +' years'
+                 
+          div.col-md-3
+            div#netcore.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#entityframework.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+                 
+         div.row#row6
+          div.col-md-3
+            div#angular.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+                  p My favorite front-end framework. 
+          div.col-md-3
+            div#angular2.tech-logo
+              div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#react.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#ui-bootstrap.tech-logo
+               div.text-wraper
+                div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Very useful, I like to learn from source code how to build directives :-).
+         div.row#row7
+          div.col-md-3
+            div#node.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#mongodb.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2016 +' years'
+                  p Started learning.
+          div.col-md-3
+            div#npm.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+                  p Very helpful with front-end developing.
+          div.col-md-3
+            div#gulp.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+                  p Very helpful with front-end developing.
+        div.row#row8
+          div.col-md-3
+            div#tfs.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2015 +' years'
+                 
+          div.col-md-3
+            div#github.tech-logo
+              div.text-wraper
+               div.info
+                  strong=new Date().getFullYear()-2013 +' years'
+        div.row#row9
+          div.col-md-3
+            div#cpp.tech-logo
+              div.text-wraper
+               div.info
+                  p
+          div.col-md-3
+            div#java.tech-logo
+              div.text-wraper
+               div.info
+                 p
+        
+  section#resume
+    div.container
+      div.col-md-12
+        h2 Resume
+        p My education and experience.
+        div.row.resume-items
+          div.col-md-3.wow.bounceInUp.animated
+            h3 Education
+          div.col-md-6.col-sm-8.wow.bounceInUp.animated
+            h4 
+              spam  Computer Science 
+            p WSB- National Louis University, Nowy Sacz, May 2013 Major: Computer Science, Specialization: software engineering 
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span WSB- National Louis University
+            i.fa.fa-calendar 
+              span 2009 - 2013
+           div.row.resume-items
+          div.col-md-3.wow.bounceInUp.animated
+            h3 EXPERIENCE
+          div.col-md-6.col-sm-8.wow.bounceInUp.animated
+            h4 
+              spam Careered Education Corporation
+            p Working as frontend developer at enrollment application for "Colorado technical university" and "American InterContinental University". 
+            |Main framework was ASP.NET MVC with Angular in frontend and MSSQL.
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Schaumburg
+            i.fa.fa-calendar 
+              span April '2014
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam  Catalyst  
+            p Working at project for CDA with technology JavaScript Angularjs, ASP.NET MVC, SharePoint. Responsible for designing and developing application. 
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Chicago
+            i.fa.fa-calendar 
+              span December 2013 -March 2014
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam  Freelancer   
+            p Worked with HTML5, ASP.NET, JavaScript. Worked for 4perfect, interval.pl, boson. 
+            |Last Project I have done was for DotCommunications, it was ASP.NET MVC website and C# application for converting Microsoft Office and OpenOffice document to PDF on the Windows Server 2008.For front end I used HTML5, CSS3, and jQuery leveraging the Bootstrap framework. 
+
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Chicago
+            i.fa.fa-calendar 
+              span April 2013 - December 2013
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam  Remote worked at Amedar   
+            p Remote worked at Amedar, part of team developed web application based on ASP.NET MVC.  Worked at creating backend and frontend. 
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Remotely
+            i.fa.fa-calendar 
+              span June 2012 - April 2013 
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam Training Pageflex C#
+            p Intensive training Pageflex C# in Boston sponsored by Amedar.
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Bostone
+            i.fa.fa-calendar 
+              span June 2012 
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam Worked at Netcreate
+            p Worked half time work during collage for Netcreate, created applications like video chat, video player  
+            |, internet speed test and other. Worked with flash ActionScript 3.0, JavaScript, HTML and PHP.
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Remotely
+            i.fa.fa-calendar 
+              span December  2011 - June 2012 
+          div.col-md-6.col-sm-8.col-md-offset-3.wow.bounceInUp.animated
+            h4 
+              spam Holiday internship Orange Labs
+            p Member of team developing application for online video training. 
+            | Worked on video streaming base on Wowza Media Server from server side and Flash technology from client side. 
+            | Application was optimization to cover twelve student audio video in HD stream and one teacher stream audio video full HD.
+            hr.hidden-xs
+          div.col-md-3.col-sm-4.resume-place.wow.bounceInRight.animated
+            h4
+              i.fa.fa-suitcase 
+              span Warsaw
+            i.fa.fa-calendar 
+              span 2010
+
+  section#portfolio
+      div.container
+        div.col-md-12
+         h2 Portfolio
+         p My best works.
+      
+        div.row
+          div.col-md-12.wow.bounceInRight.animated 
+            h3 home 3D project 
+          div.col-md-4.wow.bounceInRight.animated 
+            a(href='home3dproject.com') home3dproejct.com
+            img(src='images/portfolio/home3dproject.gif' alt='home 3d project ')
+          div.col-md-5.wow.bounceInRight.animated 
+            h4 Description - 100% my application 
+            p Home 3D project is application for architects and people who planning build house. Architect can easy way add 3d model and share with clients. Application has gallery of project, any user can view project and 3d models.
+          div.col-md-3.wow.bounceInRight.animated 
+            h4 Technology
+            ul
+              li ASP.NET MVC
+              li Angular 
+              li Bootstrap +Sass
+              li Babylon.js
+        div.row
+          div.col-md-12.wow.bounceInRight.animated 
+            h3 e-remotejobs
+          div.col-md-4.wow.bounceInRight.animated 
+            a(href='http://e-remotejobs.com') http://e-remotejobs.com
+            img(src='images/portfolio/e-remotejobs.gif' alt='e-remotejobs')
+          div.col-md-5.wow.bounceInRight.animated 
+            h4 Description - 100% my application 
+            
+            p e-remotejobs web application it's crated for helping team with collaboration and communication. User can chat with team mates, can draw on live board or leave interactive message. Chat has integrated component for task and todo lists.
+          div.col-md-3.wow.bounceInRight.animated 
+            h4 Technology
+            ul
+              li ASP.NET MVC
+              li Angular
+              li SignalR
+              li Bootstrap + Less
+        div.row
+          div.col-md-12.wow.bounceInRight.animated 
+            h3 Unified Enrollment
+          div.col-md-4.wow.bounceInRight.animated 
+            a(href='https://enrollment.coloradotech.edu') https://enrollment.coloradotech.edu / 
+            a(href='https://enrollment.aiuniv.edu/#/LandingPage') https://enrollment.aiuniv.edu/#/LandingPage
+            img(src='images/portfolio/ue.gif' alt='unified enrollment ')
+          div.col-md-5.wow.bounceInRight.animated 
+            h4 Description - CEC
+            p Enrollment application for American InterContinental University and Colorado Technical University. Student can in easy way do enrollment.
+            p In UE developing I was front-end lead. Responsible for designee and implement angular SPA, also involved in database and backend designing.
+          div.col-md-3.wow.bounceInRight.animated 
+            h4 Technology
+            ul
+              li ASP.NET MVC
+              li Angular
+              li EntityFramework Reverse POCO 
+              li Bootstrap + Less   
+              li Protractor
+              li AutoFac
+             
+  section#certifications
+    div.container
+      div.col-md-12
+         h2 Certifications
+         p Certifications achieved.
+          
+        div.row
+          table.table.table-hover
+            thead
+              tr
+                th #
+                th Technology
+                th Description
+                th Download
+            tbody
+              tr
+                td 1
+                td CSS
+                td CSS Fundamentals course
+                td 
+                  a(href='certifications/cert-1023-694302.pdf') download
+              tr
+                td 2
+                td JavaScript
+                td JavaScript for Experienced Developers
+                td 
+                  a(href='certifications/Certificatejs.pdf') download
+              tr
+                td 3
+                td CSS
+                td CSS Fundamentals course
+                td 
+                  a(href='certifications/cert-1023-694302.pdf') download
+              tr
+                td 4
+                td JavaScript
+                td JavaScript Basics course
+                td 
+                  a(href='certifications/cert-1024-694302.pdf') download
+             tr
+                td 5
+                td SQL
+                td SQL Fundamentals course
+                td 
+                  a(href='certifications/cert-1060-694302.pdf') download
+              tr
+                td 6
+                td Python 3
+                td Python 3 Tutorial course
+                td 
+                  a(href='certifications/cert-1073-694302.pdf') download
+
+          
