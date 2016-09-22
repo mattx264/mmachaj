@@ -81,10 +81,33 @@ $(document).ready(function () {
             }
         });
     });
+    allSectionId=['home','profile','technology','resume','portfolio','certifications'];
+    for(var j=0;j<allSectionId.length;j++){
+        (function (id,id2) {
+        new ScrollMagic.Scene({
+              triggerElement: id
+        }).addTo(controller)
+             .on("enter ", function (e) {
+                 for(var k=0;k<allSectionId.length;k++){
+                      $("#"+allSectionId[k]+'Nav').removeClass("active");
+                 }
+                $(id+'Nav').addClass("active");
+             })
+            .on("leave ", function (e) {
+                for(var k=0;k<allSectionId.length;k++){
+                    $("#"+allSectionId[k]+'Nav').removeClass("active");
+                }
+            $(id2+'Nav').addClass("active");
+            
+            })
+        })('#'+allSectionId[j],'#'+allSectionId[j-1]);
+    }
+
+
     //home section;
     pol.Animation.carousel();
     $('.scroll-down-wraper').hide();
-    var initTextTween = new TweenLite.to('.welcome-text', 0.5,
+    var initTextTween = new TweenLite.to('.welcome-text', 0.7,
         {
             top: '50%',
             onComplete: function () {
@@ -118,9 +141,9 @@ $(document).ready(function () {
     new ScrollMagic.Scene({
         triggerElement: '#home'
     })
-        .setTween(initTextTween)
-        .addTo(controller);
-
+      //  .setTween(initTextTween)
+    .addTo(controller);
+    
     //tech section;
     //modal
 
