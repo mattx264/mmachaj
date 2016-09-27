@@ -2,6 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     concat = require('gulp-concat'),
+    uglify=require('gulp-uglify'),
+    pump = require('pump'),
     ts = require('gulp-typescript'),
     spritesmith = require('gulp.spritesmith');
  
@@ -18,9 +20,15 @@ gulp.task('sass:watch',function(){
 });
 gulp.task('default', function () {
     //  gulp.watch('./public/stylesheets/**/*.scss',['sass']);
-    gulp.src(['./node_modules/raphael/raphael.js','./public/javascript/cookies.js'])
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('./public/javascript/'))
+    pump([gulp.src(['./public/javascript/helpers/**.js','./node_modules/raphael/raphael.js']),
+        concat('all.js'),
+        uglify(),
+        gulp.dest('./public/javascript/')
+    ])
+    // gulp.src(['./public/javascript/helpers/**.js','./node_modules/raphael/raphael.js'])
+
+    //     .pipe(concat('all.js'))
+    //     .pipe(gulp.dest('./public/javascript/'))
 
 });
 gulp.task('ts',function(){
