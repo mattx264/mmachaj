@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  
-  res.render('index', { portfolio: docs });
+
+  res.render('index', { portfolio: {} });
 
 });
 
