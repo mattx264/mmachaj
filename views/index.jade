@@ -1,6 +1,9 @@
 extends layout
 
 block content
+ div.loader-wraper
+  div.loader Loading...
+ div.main.hide
   nav.navbar-fixed-top.navbar-default 
     div.container
       div.navbar-header
@@ -120,14 +123,14 @@ block content
             h3 Technology Section Explanation
           .modal-body
             .row.center-content
-              .col-md-6
+              .col-xs-3.col-sm-6
                 img(src='images/modal-exp/img2.png').pull-right
-              .col-md-6
+              .col-xs-9.col-sm-6
                 span How a strong do I feel with technology.
             .row.center-content
-              .col-md-6
+              .col-xs-3.col-sm-6
                 img(src='images/modal-exp/img1.png').pull-right
-              .col-md-6
+               .col-xs-9.col-sm-6
                 span Years of experience and short description.
                
           .modal-footer 
@@ -484,7 +487,25 @@ block content
               li Bootstrap + Less   
               li Protractor
               li AutoFac
-             
+        section#test
+          -for(var i=0;i<portfolio.length;i++ ){
+          div.row
+                div.col-md-12.wow.bounceInRight.animated 
+                  h3 #{portfolio[i].title}
+                div.col-md-4.wow.bounceInRight.animated 
+                  a(href='#{portfolio[i].link}')  #{portfolio[i].link}
+                  img(src='images/portfolio/#{portfolio[i].img}' )
+                div.col-md-5.wow.bounceInRight.animated 
+                  h4 Description 
+                  p !{portfolio[i].description}
+                div.col-md-3.wow.bounceInRight.animated 
+                  h4 Technology
+                  ul
+                  -for(var j=0;j<portfolio[i].technology.length;j++ ){
+                    li #{portfolio[i].technology[j]}
+                  
+                  -}
+          -}
   section#certifications
     div.container
       div.col-md-12
