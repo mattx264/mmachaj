@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  /*var MongoClient = require('mongodb').MongoClient
+  var MongoClient = require('mongodb').MongoClient
   var URL = process.env.CONNECTION_STRING;
   if (URL !== undefined) {
    
@@ -19,8 +19,8 @@ router.get('/', function (req, res, next) {
 
       db.close()
     });
-  }*/
-  res.render('index', { portfolio: {} });
+  }
+  //res.render('index', { portfolio: {} });
 
 });
 

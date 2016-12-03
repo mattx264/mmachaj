@@ -1,4 +1,4 @@
-; (function (namespace) {
+(function (namespace) {
     "use strick";
     function CreateRating(techInfo, index) {
         this.techInfo = techInfo;
@@ -29,17 +29,11 @@
 
             this.paths.animate({ segment: [x, y, 100, 0, this.techInfo.knowledge * 3.6] }, ms || 1500, "bounce");
         }
-
         this.paths = ratingHolder.path().attr({ segment: [x, y, 100, 0, 0], stroke: "#fff", 'stroke-width': 5 });
-
-
-
-
         var bg = ratingHolder.circle(x, y, 65).attr({ fill: '#fff', stroke: "#fff", "stroke-width": 4 });
         var img = ratingHolder.image('/images/logo/' + this.techInfo.id + '.png', x / 2, y / 2, 100, 100);
-
-        var hoverBG = ratingHolder.circle(x, y, 100).attr({ fill: '#000', 'fill-opacity': 0, stroke: "#fff", "stroke-width": 4 });
-
+        var hoverBG = ratingHolder.circle(x, y, 100)
+            .attr({ fill: '#000', 'fill-opacity': 0, stroke: "#fff", "stroke-width": 4 });
         $('#' + this.techInfo.id).find('.text-wraper').hide();
 
         $('#' + techInfo.id).hover(function () {
@@ -69,7 +63,7 @@
         function pageInit() {
             new WOW().init();
             var controller = new ScrollMagic.Controller();
-            //
+
             $(function () {
                 $('a[href*="#"]:not([href="#"])').click(function () {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -131,23 +125,16 @@
                                         }
                                     });
                                 }, 1000)
-
                             }
                         })
-
                     }
-
                 });
 
             new ScrollMagic.Scene({
                 triggerElement: '#home'
-            })
-                //  .setTween(initTextTween)
-                .addTo(controller);
-
+            }).addTo(controller);
             //tech section;
             //modal
-
             var logoList = [{ id: 'csharp', knowledge: 90 }, { id: 'js', knowledge: 85 }, { id: 'html5', knowledge: 90 }, { id: 'sql', knowledge: 75 },
             { id: 'vs2015', knowledge: 85 }, { id: 'vs2013', knowledge: 85 }, { id: 'vs2010', knowledge: 85 }, { id: 'vs2008', knowledge: 85 },
             { id: 'css3', knowledge: 73 }, { id: 'sass', knowledge: 75 }, { id: 'less', knowledge: 70 }, { id: 'bootstrap', knowledge: 90 },
@@ -182,7 +169,7 @@
                     .on("leave", function (e) {
                         $(elementId).addClass("fadeIn")
                         $(elementId + " .tech-logo").each(function () {
-                            techLogoList[this.id].showRating() //console.log(this.id);
+                            techLogoList[this.id].showRating() // console.log(this.id);
                         });
                         if (getCookie('modal') == null || getCookie('modal') == '') {
                             setCookie('modal', true, 365)
@@ -191,18 +178,19 @@
                         }
                     })
                     .addTo(controller)
-                //.addIndicators()
-            }
-            $("#modelIgotit").click(function () {
-                $('.modal').attr('style', 'display:none');
-                $('.modal-backdrop').attr('style', 'display:none');
-            })
+
+            };
             TechScene.prototype = {
-                elementId,
+                elementId:{},
                 enterScene: function (e) {
                     $(this.elementId).addClass("fadeIn");
                 }
-            }
+            };
+            $("#modelIgotit").click(function () {
+                $('.modal').attr('style', 'display:none');
+                $('.modal-backdrop').attr('style', 'display:none');
+            });
+
         }
     });
     function Infobox(r, options, attrs) {
@@ -254,4 +242,4 @@
 
         $(this.div).find('div').remove();
     }
-})(window.namespace = window.namespace || {})
+})(window.namespace = window.namespace || {});
