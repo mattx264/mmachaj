@@ -135,15 +135,15 @@
             }).addTo(controller);
             //tech section;
             //modal
-            var logoList = [{ id: 'csharp', knowledge: 90 }, { id: 'js', knowledge: 85 }, { id: 'html5', knowledge: 90 }, { id: 'sql', knowledge: 75 },
-            { id: 'vs2015', knowledge: 85 }, { id: 'vs2013', knowledge: 85 }, { id: 'vs2010', knowledge: 85 }, { id: 'vs2008', knowledge: 85 },
-            { id: 'css3', knowledge: 73 }, { id: 'sass', knowledge: 75 }, { id: 'less', knowledge: 70 }, { id: 'bootstrap', knowledge: 90 },
-            { id: 'ecma6', knowledge: 30 }, { id: 'typescript', knowledge: 75 },
+            var logoList = [{ id: 'csharp', knowledge: 90 },{ id: 'angular', knowledge: 89 }, { id: 'js', knowledge: 85 },  { id: 'sql', knowledge: 75 },
             { id: 'dotnet', knowledge: 60 }, { id: 'mvc', knowledge: 93 }, { id: 'entityframework', knowledge: 70 }, { id: 'netcore', knowledge: 30 },
-            { id: 'angular', knowledge: 89 }, { id: 'angular2', knowledge: 20 }, { id: 'react', knowledge: 20 }, { id: 'ui-bootstrap', knowledge: 95 },
+            { id: 'css3', knowledge: 73 }, { id: 'sass', knowledge: 75 }, { id: 'less', knowledge: 70 }, { id: 'bootstrap', knowledge: 90 },
+            { id: 'html5', knowledge: 90 }, { id: 'angular2', knowledge: 25 }, { id: 'react', knowledge: 20 }, { id: 'ui-bootstrap', knowledge: 95 },
+            { id: 'ecma6', knowledge: 30 }, { id: 'typescript', knowledge: 75 },
             { id: 'node', knowledge: 40 }, { id: 'mongodb', knowledge: 30 }, { id: 'npm', knowledge: 80 }, { id: 'gulp', knowledge: 69 },
             { id: 'tfs', knowledge: 70 }, { id: 'github', knowledge: 75 },
-            { id: 'cpp', knowledge: 55 }, { id: 'java', knowledge: 50 }
+            { id: 'vs2015', knowledge: 85 }, { id: 'vs2013', knowledge: 85 }, { id: 'vs2010', knowledge: 85 }, { id: 'vs2008', knowledge: 85 },
+            { id: 'cpp', knowledge: 55 }, { id: 'python', knowledge: 45 }, { id: 'java', knowledge: 50 }
 
             ];
             var techLogoList = [];
@@ -162,8 +162,7 @@
                     triggerHook: 0.8,
                     duration: '30%',
                     reverse: false
-                })
-                    .on("enter ", function (e) {
+                }).on("enter ", function (e) {
                         $(elementId).addClass("fadeIn");
                     })
                     .on("leave", function (e) {
@@ -176,9 +175,7 @@
                             $('.modal').attr('style', 'display:block');
                             $('.modal-backdrop').attr('style', 'display:block');
                         }
-                    })
-                    .addTo(controller)
-
+                    }).addTo(controller)
             };
             TechScene.prototype = {
                 elementId:{},
